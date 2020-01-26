@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutomataSharp", "AutomataSharp\AutomataSharp.csproj", "{2B3C28A4-C55C-4CEF-BDFB-85442930D690}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomataSharp.UnitTests", "AutomataSharp.UnitTests\AutomataSharp.UnitTests.csproj", "{B2F79D06-DDB0-4327-937B-E4BB40FD758E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B3C28A4-C55C-4CEF-BDFB-85442930D690}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B3C28A4-C55C-4CEF-BDFB-85442930D690}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B3C28A4-C55C-4CEF-BDFB-85442930D690}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B3C28A4-C55C-4CEF-BDFB-85442930D690}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2F79D06-DDB0-4327-937B-E4BB40FD758E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2F79D06-DDB0-4327-937B-E4BB40FD758E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2F79D06-DDB0-4327-937B-E4BB40FD758E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2F79D06-DDB0-4327-937B-E4BB40FD758E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D78CCBC-39D2-47CB-AAE3-FF26AB877544}
+	EndGlobalSection
+EndGlobal
