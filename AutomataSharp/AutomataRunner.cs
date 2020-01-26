@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace AutomataSharp
 {
@@ -9,7 +7,6 @@ namespace AutomataSharp
         public Cell[,] Grid { get; }
         public int Width { get; }
         public int Height { get; }
-        //public Queue<AutomataGrid> History { get; }
 
         public AutomataRunner(Cell[,] grid)
         {
