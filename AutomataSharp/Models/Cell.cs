@@ -5,7 +5,7 @@
         public int State { get; private set; }
         public IConvolutionRule Rule { get; set; }
         public IFilterKernel Filter { get; set; }
-        public HistoryQueue<int> StateHistory { get; }
+        public HistoryQueue<int> StateHistory { get; set; }
         private int _nextState;
 
         public Cell() { }
