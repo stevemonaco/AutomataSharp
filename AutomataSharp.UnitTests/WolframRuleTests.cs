@@ -21,10 +21,10 @@ namespace AutomataSharp.UnitTests
         [InlineData(255, 0, 0, 0, 1)]
         [InlineData(255, 1, 0, 1, 1)]
         [InlineData(255, 1, 1, 1, 1)]
-        public void RunRule_AsExpected(int ruleNumber, int leftState, int centerState, int rightState, int expected)
+        public void RunRule_ReturnsExpected(int ruleNumber, int leftState, int centerState, int rightState, int expected)
         {
             var rule = new WolframRule(ruleNumber);
-            var filter = new NeighborFilter1D();
+            var filter = new NeighborFilter1D(EdgeWrap.Zero);
             var left = new Cell(leftState, rule, filter);
             var center = new Cell(centerState, rule, filter);
             var right = new Cell(rightState, rule, filter);
