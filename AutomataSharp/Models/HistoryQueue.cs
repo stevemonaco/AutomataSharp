@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 
 namespace AutomataSharp
 {
-    public class HistoryQueue<T>
+    public class HistoryQueue<T> : IEnumerable<T>
     {
         private Queue<T> _queue;
         public int Limit { get; set; }
@@ -31,5 +32,8 @@ namespace AutomataSharp
         public void TrimExcess() => _queue.TrimExcess();
         public bool TryDequeue(out T result) => _queue.TryDequeue(out result);
         public bool TryPeek(out T result) => _queue.TryPeek(out result);
+
+        public IEnumerator<T> GetEnumerator() => _queue.GetEnumerator();
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }
