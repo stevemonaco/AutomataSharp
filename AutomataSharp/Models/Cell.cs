@@ -6,20 +6,26 @@
         public IConvolutionRule Rule { get; set; }
         public IFilterKernel Filter { get; set; }
         public HistoryQueue<int> StateHistory { get; }
+        private int _nextState;
 
         public Cell() { }
 
-        public Cell(int state, IConvolutionRule rule, IFilterKernel filter, int historyLimit = int.MaxValue)
+        public Cell(int state, IConvolutionRule rule, IFilterKernel filter)
         {
             State = state;
             Rule = rule;
             Filter = filter;
-            StateHistory = new HistoryQueue<int>(historyLimit);
         }
 
-        public void SetState(int state)
+        public void SetNextState(int state)
         {
-            State = state;
+            _nextState = state;
+        }
+
+        public void StepState()
+        {
+            StateHistory?.Enqueue(State);
+            State = _nextState;
         }
     }
 }

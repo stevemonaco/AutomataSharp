@@ -30,7 +30,15 @@ namespace AutomataSharp
                         var cell = Grid[x, y];
                         filterList.Clear();
                         filterList.AddRange(cell.Filter.Filter(Grid, x, y));
-                        cell.SetState(cell.Rule.RunRule(filterList));
+                        cell.SetNextState(cell.Rule.RunRule(filterList));
+                    }
+                }
+
+                for (int y = 0; y < Height; y++)
+                {
+                    for (int x = 0; x < Width; x++)
+                    {
+                        Grid[x, y].StepState();
                     }
                 }
             }
